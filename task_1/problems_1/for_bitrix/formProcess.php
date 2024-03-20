@@ -7,6 +7,16 @@ try {
     exit;
 }
 
+if (!folderExists("messages")) {
+    echo "The folder has not been created";
+    exit;
+}
+
+if (!folderExists("uploads")) {
+    echo "The folder has not been created";
+    exit;
+}
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = null;
     $email = null;
